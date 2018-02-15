@@ -13,9 +13,6 @@ const chefSchema = new Schema({
     chefStory: {
         type: String,
         require: true
-    },
-    experiences: {
-        type: Schema.ObjectID, ref: 'Experience'
     }
 
 })
