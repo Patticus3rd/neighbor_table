@@ -17,11 +17,9 @@ const chefSchema = new Schema({
     },
     lastName: {
         type: String,
-        require: true
     },
     chefStory: {
         type: String,
-        require: true
     }
 
 });
