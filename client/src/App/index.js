@@ -1,10 +1,11 @@
 import React from 'react'
-import LoginForm from '../pages/LoginForm';
+import LoginForm from './LoginForm';
+
 
 function App() {
     return (
         <div>
-           <LoginForm/>
+            <LoginForm />
         </div>
     )
 }
