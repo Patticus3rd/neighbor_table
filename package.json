@@ -1,0 +1,28 @@
+{
+  "name": "neighbor_table",
+  "version": "1.0.0",
+  "description": "##Objective:  To create a peer-to-peer application that connects home chefs with guests seeking an authentic home dining experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patticus3rd/neighbor_table.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patticus3rd/neighbor_table/issues"
+  },
+  "homepage": "https://github.com/Patticus3rd/neighbor_table#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "firebase": "^4.9.1",
+    "mongoose": "^5.0.5",
+    "morgan": "^1.9.0",
+    "redux-thunk": "^2.2.0"
+  }
+}
