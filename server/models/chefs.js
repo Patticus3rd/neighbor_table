@@ -24,6 +24,12 @@ const chefSchema = new Schema({
         require: true
     }
 
-})
+});
+
+chefSchema.methods.withoutPassword = function(){
+    let chef = this.toObject();
+    delete chef.password;
+    return chef;
+}
 
 module.exports = mongoose.model('Chef', chefSchema);

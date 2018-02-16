@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
+import LoginForm from './LoginForm';
 
-class LoginForm extends Component {
+class LoginFormContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -11,17 +12,41 @@ class LoginForm extends Component {
             }
         }
     }
+    handleChange(e){
+        e.persist();
+        this.setState(prevState => {
+            return {
+                inputs: {
+                    ...prevState.inputs,
+                    [e.target.name]: e.target.value
+                }
+            }
+        })
+    }
+    clearInputs(){
+        this.setState({
+            inputs: {
+                email: "",
+                password: ""
+            }
+        })
+    }
 
+    handleSubmit(e){
+        e.preventDefault();
+        alert(JSON.stringify(this.state.inputs))
+        this.clearInputs();
+    }
     
     render() {
         return (
-            <Form>
-                <Form.Input label='Email' />
-                <Form.Input label='Password' />
-            </Form>
+            <LoginForm
+            handleChange={this.handleChange.bind(this)}
+            handleSubmit={this.handleSubmit.bind(this)}
+            {...this.state.iputs}/>
         )
     }
 
 }
 
-export default LoginForm;
+export default LoginFormContainer;

@@ -1,11 +1,11 @@
 import React from 'react'
-import LoginForm from './LoginForm';
+import LoginFormContainer from './LoginForm';
 
 
 function App() {
     return (
         <div>
-            <LoginForm />
+            <LoginFormContainer />
         </div>
     )
 }
