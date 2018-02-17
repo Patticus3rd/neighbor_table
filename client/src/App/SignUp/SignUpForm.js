@@ -1,11 +1,12 @@
 import React from 'react'
-import { Form, Header } from 'semantic-ui-react';
+import { Form, Header, Button } from 'semantic-ui-react';
 
 function SignUpForm(props) {
     return (
         <div>
             <Header> SignUp  </Header>
-            <Form>
+            <Form onSubmit={props.handleSubmit}>
+                <Form.Group>
                 <Form.Input
                     onChange={props.handleChange}
                     value={props.email}
@@ -18,6 +19,7 @@ function SignUpForm(props) {
                     name="password"
                     label='Password'
                 />
+                </Form.Group>
                 <Form.Group>
                     <Form.Input
                         onChange={props.handleChange}
@@ -32,6 +34,7 @@ function SignUpForm(props) {
                         label="Last Name"
                     />
                 </Form.Group>
+                <Button>Sign Up!</Button>
             </Form>
         </div>
     )
