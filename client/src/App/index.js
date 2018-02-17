@@ -10,12 +10,13 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 class App extends Component {
     render() {
         return (
-            <Router>
+            <div>
                 <Switch>
                     <Route exact path='/' component={LandingPage}/>
+                    <Route path='/chefs/login' component={LoginFormContainer}/>
+                    <Route path='/diners/login' component={LoginFormContainer}/>
                 </Switch>
-            </Router>
-            
+            </div>
         )
     }
 }

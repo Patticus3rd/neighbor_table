@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 const LandingPage = withRouter(({ history }) => (
     <div>
+        <Header>Sign In As A Chef or a Diner</Header>
         <Button onClick={() => { history.push('./chefs/login') }}>Chef</Button>
         <Button onClick={() => { history.push('./diners/login') }}>Diners</Button>
     </div>
