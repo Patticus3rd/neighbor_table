@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 9000;
 const app = express();
 
 //middleware
+app.use(morgan())
 app.use(bodyParser.json());
 app.use(cors());
 

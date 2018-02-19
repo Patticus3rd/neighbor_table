@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Form, Header, Button, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import { login } from '../../redux/actions/auth.js';
+// import { login } from '../../redux/actions/auth.js';
 import { withRouter } from 'react-router-dom';
 
-class LoginForm extends Component {
+class ChefLoginForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,10 +15,10 @@ class LoginForm extends Component {
  
 
     render() {
-        let { handleChange, email, password, login, handleSubmit } = this.props;
+        let { handleChange, email, password, handleSubmit } = this.props;
         return (
             <div>
-                <Header>Login</Header>
+                <Header>Login As A Chef</Header>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group>
                         <Form.Input
@@ -35,7 +35,7 @@ class LoginForm extends Component {
                         />
                         <Segment>
                             Not Registered? Sign Up
-                <Link to='/diners/signup'>Here</Link>
+                <Link to='/chefs/signup'>Here</Link>
                         </Segment>
                         <Button>Login</Button>
                     </Form.Group>
@@ -46,4 +46,4 @@ class LoginForm extends Component {
 
 }
 
-export default LoginForm;
+export default ChefLoginForm;

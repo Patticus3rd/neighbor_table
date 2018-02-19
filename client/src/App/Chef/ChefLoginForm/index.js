@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
-import LoginForm from './LoginForm.js';
+import ChefLoginForm from './ChefLoginForm.js';
 import { connect } from 'react-redux';
-import { login } from '../../redux/actions/auth.js'
+// import { login } from '../../redux/actions/auth.js'
 
-class LoginFormContainer extends Component {
+class ChefLoginFormContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -38,7 +38,7 @@ class LoginFormContainer extends Component {
     handleSubmit(e){
         let { login } = this.props;
         e.preventDefault();
-        login(this.state.inputs);
+        // login(this.state.inputs);
         alert(JSON.stringify(this.state.inputs))
         this.clearInputs();
     }
@@ -46,7 +46,7 @@ class LoginFormContainer extends Component {
     render() {
         const { redirect } = this.state
         return (
-            <LoginForm
+            <ChefLoginForm
             handleChange={this.handleChange.bind(this)}
             handleSubmit={this.handleSubmit.bind(this)}
             {...this.state.inputs}/>
@@ -55,4 +55,4 @@ class LoginFormContainer extends Component {
 
 }
 
-export default connect(null, ({ login })) (LoginFormContainer);
+export default connect(null) (ChefLoginFormContainer);

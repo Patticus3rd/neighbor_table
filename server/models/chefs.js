@@ -20,6 +20,7 @@ const chefSchema = new Schema({
     },
     chefStory: {
         type: String,
+        required: true
     }
 
 });

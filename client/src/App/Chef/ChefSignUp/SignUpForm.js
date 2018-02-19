@@ -4,7 +4,7 @@ import { Form, Header, Button } from 'semantic-ui-react';
 function SignUpForm(props) {
     return (
         <div>
-            <Header> SignUp as a Diner </Header>
+            <Header> SignUp as a Chef </Header>
             <Form onSubmit={props.handleSubmit}>
                 <Form.Group>
                 <Form.Input
@@ -34,6 +34,7 @@ function SignUpForm(props) {
                         label="Last Name"
                     />
                 </Form.Group>
+                <Form.TextArea label='About' placeholder='Tell us more about you...' />
                 <Button>Sign Up!</Button>
             </Form>
         </div>
