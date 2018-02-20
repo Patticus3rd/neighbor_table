@@ -34,6 +34,15 @@ function SignUpForm(props) {
                         label="Last Name"
                     />
                 </Form.Group>
+                <Form.Group>
+                    <Form.Input 
+                    onChange={props.handleChange}
+                    value={props.profession}
+                    name="profession"
+                    label="What is your profession?"
+                    />
+                </Form.Group>
+                <Form.TextArea label='About' placeholder='Tell us more about you...' />
                 <Button>Sign Up!</Button>
             </Form>
         </div>

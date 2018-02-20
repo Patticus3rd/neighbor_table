@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+.navbar-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    font-family: 'Pacifico';
+    font-size: 20px;
+    line-height: 50px;
+    border: 20px groove #EDD298;
+    background-color: #EDEDE6;
+}
+
+.text-link {
+    color: #549091;
+}

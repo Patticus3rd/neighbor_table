@@ -36,11 +36,12 @@ class LoginFormContainer extends Component {
     }
 
     handleSubmit(e){
-        let { login } = this.props;
+        let { login, history } = this.props;
         e.preventDefault();
         login(this.state.inputs);
         alert(JSON.stringify(this.state.inputs))
         this.clearInputs();
+        history.push('/diners/experience')
     }
     
     render() {

@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Divider } from 'semantic-ui-react';
+import './index.css';
 
 function NavBar(props) {
     return (
-        <div>
-            <Link to='/'>Home</Link>
-            <Link to='/diners/login'>Login</Link>
+        <div class="navbar-container">
+            <Link className="text-link" to='/'>Home</Link>
+            <Link className="text-link" to='/diners/login'>Diner Login</Link>
+            <Link className="text-link" to='/chefs/login'>Chef Login</Link>
         </div>
     )
 }

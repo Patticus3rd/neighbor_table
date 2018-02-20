@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 import ChefLoginForm from './ChefLoginForm.js';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 // import { login } from '../../redux/actions/auth.js'
 
 class ChefLoginFormContainer extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             inputs: {
                 email: "",
                 password: ""
-            },
-            redirect: false
+            }
         }
     }
-    handleChange(e){
+    handleChange(e) {
         e.persist();
         this.setState(prevState => {
             return {
@@ -26,7 +26,7 @@ class ChefLoginFormContainer extends Component {
             }
         })
     }
-    clearInputs(){
+    clearInputs() {
         this.setState({
             inputs: {
                 email: "",
@@ -35,24 +35,24 @@ class ChefLoginFormContainer extends Component {
         })
     }
 
-    handleSubmit(e){
-        let { login } = this.props;
+    handleSubmit(e) {
+        let { login, history } = this.props;
         e.preventDefault();
-        // login(this.state.inputs);
+        login(this.state.inputs);
         alert(JSON.stringify(this.state.inputs))
-        this.clearInputs();
+        history.push('/chefs/bookings')
     }
-    
+
     render() {
-        const { redirect } = this.state
-        return (
-            <ChefLoginForm
-            handleChange={this.handleChange.bind(this)}
-            handleSubmit={this.handleSubmit.bind(this)}
-            {...this.state.inputs}/>
-        )
+            return (
+                <ChefLoginForm
+                    handleChange={this.handleChange.bind(this)}
+                    handleSubmit={this.handleSubmit.bind(this)}
+                    {...this.state.inputs} />
+            )
+        }
+
     }
 
-}
 
-export default connect(null) (ChefLoginFormContainer);
+export default connect(null)(ChefLoginFormContainer);
