@@ -1,0 +1,123 @@
+body {
+    font-family: 'Verdana';
+
+}
+
+.button {
+    margin-left: 270px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+
+}
+
+.App {
+    background-image: url('https://media1.popsugar-assets.com/files/thumbor/aa5ZElNLCls-CI_csVol-lppr1U/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2013/06/19/859/n/1922195/f6b0d02760816f9f_6ab0b02ccc3e11e2bfc922000a9e08f9_7/i/Palm-tree-fruit-art-fits-right-our-carefree-Summer-living.jpeg');
+    padding: 380px;
+}
+
+.about-div {
+    background-color: black;
+}
+
+.about {
+    background-image: url('https://cf0316.s3.amazonaws.com/cookificom/menu/49434/f8ea04.jpg');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-two {
+    background-image: url('https://www.2knowandvote.com/wp-content/uploads/2016/11/The-Amazing-Taste-of-Indian-Foods-%E2%80%93-Art-or-Science-1-e1479469260267.jpg');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-three {
+    background-image: url('http://cancunmexicangrillon33rd.com/files/2014/04/002.jpg');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-four {
+    background-image: url('https://qph.fs.quoracdn.net/main-qimg-e0440015077b1960cfd97bfc2a2f2d47-c');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-five {
+    background-image: url('http://www.elmesondepepe.com/wp-content/uploads/2015/10/el-meson-cuban-cuisine.jpg');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-six {
+    background-image: url('https://vacations.tips/wp-content/uploads/2017/09/Thailand-cuisine-1.jpg');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-seven {
+    background-image: url('https://eatmovehack.com/wp-content/uploads/2018/01/vegan-supplements.jpg');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-eight {
+    background-image: url('https://previews.123rf.com/images/tonobalaguer/tonobalaguer1602/tonobalaguer160201244/52500802-tapas-from-spain-varied-mix-of-most-popular-tapa-mediterranean-food.jpg');
+    padding: 100px;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about-text {
+    color: white;
+}
+
+.go-home {
+    margin-left: 670px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.main-page {
+    margin: 0 -400px;
+    /* add back negative margin value */
+    padding: 0.25rem 400px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.home-page-title {
+    margin-left: 205px;
+}
+
+.list-group {
+    display: flex;
+    flex-grow: 2
+}
+
+.list-group-item {
+    margin-left: 25px;
+}

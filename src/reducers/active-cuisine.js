@@ -1,0 +1,10 @@
+//state argument is not application state, only the state the reducer is responsible for
+
+export default function(state = null, action) {
+    switch (action.type) {
+    case 'CUISINE_SELECTED':
+        return action.payload
+    }
+
+    return state;
+}
