@@ -20,7 +20,8 @@ app.use(cors());
 
 const chefsRoute = require('./routes/chefs.js');
 const dinersRoute = require('./routes/diners.js');
-const expRoute = require('./routes/experiences.js')
+const expRoute = require('./routes/experiences.js');
+var checkout = require('./routes/checkout');
 
 //connect to mongoose to db
 mongoose.Promise = global.Promise;
@@ -35,6 +36,7 @@ mongoose.connect('mongodb://localhost:27017',
 app.use('/chefs', chefsRoute);
 app.use('/diners', dinersRoute);
 app.use('/cuisines', expRoute);
+app.use('/checkout', checkout);
 
 app.listen(PORT, () => {
     console.log(`Listening On Port ${PORT} For Your Mama`)

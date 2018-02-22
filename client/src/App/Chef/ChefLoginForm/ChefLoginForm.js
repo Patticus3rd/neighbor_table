@@ -18,7 +18,7 @@ class ChefLoginForm extends Component {
         let { handleChange, email, password, handleSubmit } = this.props;
         return (
             <div class="form-card-wrapper">
-                <h1 class='login-header'>Login As A Chef</h1>
+                <h1 class='login-header'>Chef Login</h1>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group>
                         <Form.Input
