@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-card-wrapper{
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+}
+
+.login-header{
+    color: #507642;
+    padding-top: 60px;
+    font-family: 'Niconne', cursive;
+    font-size: 80px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Header, Button, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import '../index.css'
 
 
 class LoginForm extends Component {
@@ -16,8 +17,8 @@ class LoginForm extends Component {
     render() {
         let { handleChange, email, password, login, handleSubmit } = this.props;
         return (
-            <div>
-                <Header>Login</Header>
+            <div class="form-card-wrapper">
+                <h1 class="login-header">Login</h1>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group>
                         <Form.Input

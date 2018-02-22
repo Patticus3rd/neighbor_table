@@ -10,7 +10,7 @@ const LandingPage = withRouter(({ history }) => (
     <div class="button-wrapper">
         <div class="page-wrapper">
             <h2 class="header-name">Neighbor Table</h2>
-            <Header center>Sign In As A Chef or a Diner</Header>
+            <h3 class="color-assign">Sign In As A Chef or a Diner</h3>
             <Button onClick={() => { history.push('./chefs/login') }}>Chef</Button>
             <Button onClick={() => { history.push('./diners/login') }}>Diners</Button>
         </div>

@@ -4,6 +4,7 @@ import LoginForm from './LoginForm.js';
 import { connect } from 'react-redux';
 import { login } from '../../redux/actions/auth.js'
 import { withRouter } from 'react-router-dom';
+import '../index.css'
 
 class LoginFormContainer extends Component {
     constructor(props){
@@ -46,10 +47,14 @@ class LoginFormContainer extends Component {
     
     render() {
         return (
+            <div class="form-wrapper">
+           
             <LoginForm
             handleChange={this.handleChange.bind(this)}
             handleSubmit={this.handleSubmit.bind(this)}
             {...this.state.inputs}/>
+                 
+            </div>
         )
     }
 
