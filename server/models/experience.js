@@ -14,16 +14,12 @@ const experienceSchema = new Schema({
         type: String,
         required: true
     },
-    expChef: {
-        type: Schema.Types.ObjectId,
-        ref: "Chef"
-    },
     price: {
         type: Number,
         required: true
     },
     pictures: {
-        type: [String]
+        type: String
     },
 
 })

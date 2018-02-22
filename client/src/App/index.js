@@ -12,6 +12,7 @@ import ExpForm from './Chef/ExpForm';
 import LandingPage from './pages/LandingPage';
 import { Switch, Route } from 'react-router-dom';
 import { login, chefLogin, dinerSign, chefSign } from '../redux/actions/auth.js';
+import { postCuisine } from '../redux/actions/cuisine.js'
 import StaticLayout from './pages/StaticPage';
 import Payment from './Payment';
 import './index.css'
@@ -33,7 +34,7 @@ class App extends Component {
                     <Route path='/diners/signup' render={(props) => <SignUpFormContainer {...props} />} register={dinerSign} />
                     <Route path='/chefs/bookings' component={Booking} />
                     <Route path='/diners/experience' component={Experience} />
-                    <Route path='/chefs/expform' component={ExpForm} />
+                    <Route path='/chefs/expform'  render={(props) => <ExpForm {...props} />} add={postCuisine}/>
                     <Route path='/diners/payment' component={Payment} />
                 </Switch>
             </div>

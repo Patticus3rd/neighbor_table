@@ -1,17 +1,26 @@
+import axios from 'axios'
+import { setFlash } from './flash';
+
 const cuisineReducer = (state = null, action) => {
   switch (action.type) {
-  case 'GET_CUISINE':
-      return action.payload
+    case 'POST_CUISINE':
+      return action.cuisine
   }
 
   return state;
 }
 
-export const selectCuisine = (cuisine) => {
-  //console.log('a cuisine has been selected', cuisine.style);
-  return {
-    type: 'CUISINE_SELECTED',
-    payload: cuisine
+const cuisineURL = "http://localhost:9000/cuisines/"
+
+export const postCuisine = (cuisine) => {
+  return function action(dispatch){
+    axios.post(cuisineURL, cuisine)
+    .then(res => {
+      dispatch(setFlash('Cuisine Added!', 'green'))
+    })
+    .catch( err => {
+      console.log(err)
+    })
   }
 }
 

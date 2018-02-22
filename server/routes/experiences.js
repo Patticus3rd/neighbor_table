@@ -13,7 +13,7 @@ expRoutes.route('/')
     })
     .post((req, res) => {
         let newExp = new Exp(req.body);
-        expChef = req.user._id;
+        // expChef = req.user._id;
         newExp.save((err, newExp) => {
             if(err) return res.status(500).send(err);
             return res.send(newExp)
