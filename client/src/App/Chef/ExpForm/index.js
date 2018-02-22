@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form } from 'semantic-ui-react';
+import { Form, Button } from 'semantic-ui-react';
 
 class ExpForm extends Component {
     constructor(props){
@@ -18,7 +18,11 @@ class ExpForm extends Component {
         return(
             <Form>
                 <Form.Group>
-                    <Form.Input name="expName" value={expName} />
+                    <Form.Input label="Cuisine Name" name="expName" value={expName} />
+                    <Form.Input label="City" name="expCity" value={expCity} />
+                    <Form.Input label="State" name="expState" value={expState} />
+                    <Form.Input label="Price" name="price" value={price} />
+                    <Button>Submit </Button>
                 </Form.Group>
             </Form>
         )

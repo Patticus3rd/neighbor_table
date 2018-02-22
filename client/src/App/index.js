@@ -13,6 +13,7 @@ import LandingPage from './pages/LandingPage';
 import { Switch, Route } from 'react-router-dom';
 import { login, chefLogin, dinerSign, chefSign } from '../redux/actions/auth.js';
 import StaticLayout from './pages/StaticPage';
+import './index.css'
 
 
 
@@ -20,7 +21,9 @@ class App extends Component {
     render() {
         return (
             <div>
+                <div class="wrapper">
                 <StaticLayout />
+                </div>
                 <Switch>
                     <Route exact path='/' component={LandingPage} />
                     <Route path='/chefs/login' render={(props) => <ChefLoginFormContainer {...props} login={chefLogin} />} />

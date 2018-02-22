@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne|Raleway');
+
+*{
+    box-sizing: border-box;
+}
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-wrapper{
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 200px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: url('../../shared/images/other.jpg')no-repeat center center fixed;
+    background-size: 100%;
+    min-height: 100%;
+    min-width: 1024px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+}
+
+.header-name{
+   font-size: 70px;
+   font-family: 'Niconne', cursive;
+   color: #507642;
+}
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .button-wrapper {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
