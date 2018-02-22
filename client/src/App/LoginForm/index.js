@@ -3,6 +3,7 @@ import { Form } from 'semantic-ui-react';
 import LoginForm from './LoginForm.js';
 import { connect } from 'react-redux';
 import { login } from '../../redux/actions/auth.js'
+import { withRouter } from 'react-router-dom';
 
 class LoginFormContainer extends Component {
     constructor(props){
@@ -39,13 +40,11 @@ class LoginFormContainer extends Component {
         let { login, history } = this.props;
         e.preventDefault();
         login(this.state.inputs);
-        alert(JSON.stringify(this.state.inputs))
         this.clearInputs();
         history.push('/diners/experience')
     }
     
     render() {
-        const { redirect } = this.state
         return (
             <LoginForm
             handleChange={this.handleChange.bind(this)}

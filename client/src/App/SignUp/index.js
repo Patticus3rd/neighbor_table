@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 import SignUpForm from './SignUpForm';
+import { connect } from 'react-redux';
+import { dinerSign } from '../../redux/actions/auth.js';
 
 class SignUpFormContainer extends Component {
     constructor(props){
@@ -9,7 +11,10 @@ class SignUpFormContainer extends Component {
             inputs: {
                 email: "",
                 password: "",
-                firstName: ""
+                firstName: "",
+                lastName: "",
+                profession: "",
+                aboutMe: ""
             }
         }
     }
@@ -28,14 +33,19 @@ class SignUpFormContainer extends Component {
         this.setState({
             inputs: {
                 email: "",
-                password: ""
+                password: "",
+                firstName: "",
+                lastName: "",
+                profession: "",
+                aboutMe: ""
             }
         })
     }
 
     handleSubmit(e){
+        let { dinerSign } = this.props;
         e.preventDefault();
-        alert(JSON.stringify(this.state.inputs))
+        dinerSign(this.state.inputs)
         this.clearInputs();
     }
     
@@ -44,10 +54,10 @@ class SignUpFormContainer extends Component {
             <SignUpForm
             handleChange={this.handleChange.bind(this)}
             handleSubmit={this.handleSubmit.bind(this)}
-            {...this.state.iputs}/>
+            {...this.state.inputs}/>
         )
     }
 
 }
 
-export default SignUpFormContainer;
+export default connect(null, ({ dinerSign})) (SignUpFormContainer);

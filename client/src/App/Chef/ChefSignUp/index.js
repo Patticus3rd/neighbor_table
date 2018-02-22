@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 import SignUpForm from './SignUpForm';
+import { connect } from 'react-redux';
+import {chefSign} from '../../../redux/actions/auth.js'
 
 class ChefSignUpFormContainer extends Component {
     constructor(props) {
@@ -13,6 +15,7 @@ class ChefSignUpFormContainer extends Component {
                 chefStory: ""
             }
         }
+        this.clearInputs = this.clearInputs.bind(this)
     }
     handleChange(e) {
         e.persist();
@@ -26,6 +29,7 @@ class ChefSignUpFormContainer extends Component {
         })
     }
     clearInputs() {
+        debugger
         this.setState({
             inputs: {
                 email: "",
@@ -37,8 +41,9 @@ class ChefSignUpFormContainer extends Component {
     }
 
     handleSubmit(e) {
+        let { chefSign } = this.props;
         e.preventDefault();
-        alert(JSON.stringify(this.state.inputs))
+        chefSign(this.state.inputs)
         this.clearInputs();
     }
 
@@ -53,4 +58,4 @@ class ChefSignUpFormContainer extends Component {
 
 }
 
-export default ChefSignUpFormContainer;
+export default connect(null, {chefSign}) (ChefSignUpFormContainer);

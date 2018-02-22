@@ -6,7 +6,11 @@ const experienceSchema = new Schema({
         type: String,
         required: true
     },
-    expLocation: {
+    expCity: {
+        type: String,
+        required: true
+    },
+    expState: {
         type: String,
         required: true
     },

@@ -17,8 +17,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //import routes
+
 const chefsRoute = require('./routes/chefs.js');
 const dinersRoute = require('./routes/diners.js');
+const expRoute = require('./routes/experiences.js')
 
 //connect to mongoose to db
 mongoose.Promise = global.Promise;
@@ -29,8 +31,10 @@ mongoose.connect('mongodb://localhost:27017',
 })
 
 //routes
+// app.use("/api", expressJwt({secret: process.env.SECRET}))
 app.use('/chefs', chefsRoute);
-app.use('./diners', dinersRoute);
+app.use('/diners', dinersRoute);
+app.use('/cuisines', expRoute);
 
 app.listen(PORT, () => {
     console.log(`Listening On Port ${PORT} For Your Mama`)

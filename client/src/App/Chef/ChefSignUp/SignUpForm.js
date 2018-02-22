@@ -7,18 +7,18 @@ function SignUpForm(props) {
             <Header> SignUp as a Chef </Header>
             <Form onSubmit={props.handleSubmit}>
                 <Form.Group>
-                <Form.Input
-                    onChange={props.handleChange}
-                    value={props.email}
-                    name="email"
-                    label='Email'
-                />
-                <Form.Input
-                    onChange={props.handleChange}
-                    value={props.password}
-                    name="password"
-                    label='Password'
-                />
+                    <Form.Input
+                        onChange={props.handleChange}
+                        value={props.email}
+                        name="email"
+                        label='Email'
+                    />
+                    <Form.Input
+                        onChange={props.handleChange}
+                        value={props.password}
+                        name="password"
+                        label='Password'
+                    />
                 </Form.Group>
                 <Form.Group>
                     <Form.Input
@@ -34,7 +34,12 @@ function SignUpForm(props) {
                         label="Last Name"
                     />
                 </Form.Group>
-                <Form.TextArea label='About' placeholder='Tell us more about you...' />
+                <Form.TextArea
+                    label='About'
+                    onChange={props.handleChange}
+                    value={props.chefStory} 
+                    name="chefStory"
+                    placeholder='Tell us more about you...' />
                 <Button>Sign Up!</Button>
             </Form>
         </div>

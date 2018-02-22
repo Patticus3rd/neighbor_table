@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Header, Button, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import { login } from '../../redux/actions/auth.js';
-import { withRouter } from 'react-router-dom';
+
 
 class LoginForm extends Component {
     constructor(props) {
